@@ -55,6 +55,17 @@
 			path = "Preferences Views";
 			sourceTree = "<group>";
 		};
+		346C331F1FEF8F5400C4C393 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				34785D321FEF5F6F008F7DE8 /* Assets.xcassets */,
+				34785D341FEF5F6F008F7DE8 /* Main.storyboard */,
+				34785D371FEF5F6F008F7DE8 /* Info.plist */,
+				34785D381FEF5F6F008F7DE8 /* MMPreferencesWindowExample.entitlements */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		34785D221FEF5F6F008F7DE8 = {
 			isa = PBXGroup;
 			children = (
@@ -78,10 +89,7 @@
 				346C331C1FEF8A4B00C4C393 /* Preferences Views */,
 				34785D2E1FEF5F6F008F7DE8 /* AppDelegate.swift */,
 				34785D301FEF5F6F008F7DE8 /* ViewController.swift */,
-				34785D321FEF5F6F008F7DE8 /* Assets.xcassets */,
-				34785D341FEF5F6F008F7DE8 /* Main.storyboard */,
-				34785D371FEF5F6F008F7DE8 /* Info.plist */,
-				34785D381FEF5F6F008F7DE8 /* MMPreferencesWindowExample.entitlements */,
+				346C331F1FEF8F5400C4C393 /* Resources */,
 			);
 			path = MMPreferencesWindowExample;
 			sourceTree = "<group>";
