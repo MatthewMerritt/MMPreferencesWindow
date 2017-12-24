@@ -1,5 +1,5 @@
 //
-//  PreferencesWindowController.swift
+//  MMPreferencesWindowController.swift
 //  Swift-NSToolBar
 //
 //  Created by Matthew Merritt on 12/11/17.
@@ -54,7 +54,7 @@ public class MMPreferencesWindowController: NSWindowController, NSToolbarDelegat
     public var preferenceViewsToAdd = [MMPreferenceView]()
 
     convenience init() {
-        self.init(windowNibName: NSNib.Name(rawValue: "PreferencesWindowController"))
+        self.init(windowNibName: NSNib.Name(rawValue: "MMPreferencesWindowController"))
     }
 
     override public func windowDidLoad() {
