@@ -8,7 +8,7 @@
 
 import Cocoa
 
-public class PreferencesViewController: NSViewController {
+public class MMPreferencesViewController: NSViewController {
 
     override public func viewDidLoad() {
         super.viewDidLoad()

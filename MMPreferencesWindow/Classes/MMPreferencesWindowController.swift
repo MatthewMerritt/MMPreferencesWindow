@@ -41,9 +41,9 @@ public class PreferenceView {
 
 }
 
-public class PreferencesWindowController: NSWindowController, NSToolbarDelegate, NSWindowDelegate {
+public class MMPreferencesWindowController: NSWindowController, NSToolbarDelegate, NSWindowDelegate {
 
-    public static var shared: PreferencesWindowController = PreferencesWindowController()
+    public static var shared: MMPreferencesWindowController = MMPreferencesWindowController()
 
     var toolbar: NSToolbar? = nil
     var currentViewController: NSViewController!
@@ -98,7 +98,7 @@ public class PreferencesWindowController: NSWindowController, NSToolbarDelegate,
                 toolbarItem.label = view.title
                 toolbarItem.image = iconImage
                 toolbarItem.target = self
-                toolbarItem.action = #selector(PreferencesWindowController.viewSelected(_:))
+                toolbarItem.action = #selector(MMPreferencesWindowController.viewSelected(_:))
 
                 return toolbarItem
             }

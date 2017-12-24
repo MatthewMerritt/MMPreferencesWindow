@@ -12,9 +12,9 @@
 		34785D331FEF5F6F008F7DE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34785D321FEF5F6F008F7DE8 /* Assets.xcassets */; };
 		34785D361FEF5F6F008F7DE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34785D341FEF5F6F008F7DE8 /* Main.storyboard */; };
 		34785D451FEF5FE2008F7DE8 /* GeneralView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34785D411FEF5FE2008F7DE8 /* GeneralView.xib */; };
-		34785D461FEF5FE2008F7DE8 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34785D421FEF5FE2008F7DE8 /* PreferencesWindowController.swift */; };
-		34785D471FEF5FE2008F7DE8 /* PreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34785D431FEF5FE2008F7DE8 /* PreferencesWindowController.xib */; };
-		34785D481FEF5FE2008F7DE8 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34785D441FEF5FE2008F7DE8 /* PreferencesViewController.swift */; };
+		34785D461FEF5FE2008F7DE8 /* MMPreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34785D421FEF5FE2008F7DE8 /* MMPreferencesWindowController.swift */; };
+		34785D471FEF5FE2008F7DE8 /* MMPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34785D431FEF5FE2008F7DE8 /* MMPreferencesWindowController.xib */; };
+		34785D481FEF5FE2008F7DE8 /* MMPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34785D441FEF5FE2008F7DE8 /* MMPreferencesViewController.swift */; };
 		34785D4A1FEF62DB008F7DE8 /* AdvancedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34785D491FEF62DB008F7DE8 /* AdvancedView.xib */; };
 		34785D4C1FEF6451008F7DE8 /* ScreenShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 34785D4B1FEF6451008F7DE8 /* ScreenShot.png */; };
 /* End PBXBuildFile section */
@@ -28,9 +28,9 @@
 		34785D371FEF5F6F008F7DE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34785D381FEF5F6F008F7DE8 /* MMPreferencesWindowExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MMPreferencesWindowExample.entitlements; sourceTree = "<group>"; };
 		34785D411FEF5FE2008F7DE8 /* GeneralView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralView.xib; sourceTree = "<group>"; };
-		34785D421FEF5FE2008F7DE8 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
-		34785D431FEF5FE2008F7DE8 /* PreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindowController.xib; sourceTree = "<group>"; };
-		34785D441FEF5FE2008F7DE8 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		34785D421FEF5FE2008F7DE8 /* MMPreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMPreferencesWindowController.swift; sourceTree = "<group>"; };
+		34785D431FEF5FE2008F7DE8 /* MMPreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMPreferencesWindowController.xib; sourceTree = "<group>"; };
+		34785D441FEF5FE2008F7DE8 /* MMPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMPreferencesViewController.swift; sourceTree = "<group>"; };
 		34785D491FEF62DB008F7DE8 /* AdvancedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvancedView.xib; sourceTree = "<group>"; };
 		34785D4B1FEF6451008F7DE8 /* ScreenShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,9 +90,9 @@
 			children = (
 				34785D411FEF5FE2008F7DE8 /* GeneralView.xib */,
 				34785D491FEF62DB008F7DE8 /* AdvancedView.xib */,
-				34785D441FEF5FE2008F7DE8 /* PreferencesViewController.swift */,
-				34785D421FEF5FE2008F7DE8 /* PreferencesWindowController.swift */,
-				34785D431FEF5FE2008F7DE8 /* PreferencesWindowController.xib */,
+				34785D441FEF5FE2008F7DE8 /* MMPreferencesViewController.swift */,
+				34785D421FEF5FE2008F7DE8 /* MMPreferencesWindowController.swift */,
+				34785D431FEF5FE2008F7DE8 /* MMPreferencesWindowController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -167,7 +167,7 @@
 				34785D4A1FEF62DB008F7DE8 /* AdvancedView.xib in Resources */,
 				34785D331FEF5F6F008F7DE8 /* Assets.xcassets in Resources */,
 				34785D451FEF5FE2008F7DE8 /* GeneralView.xib in Resources */,
-				34785D471FEF5FE2008F7DE8 /* PreferencesWindowController.xib in Resources */,
+				34785D471FEF5FE2008F7DE8 /* MMPreferencesWindowController.xib in Resources */,
 				34785D361FEF5F6F008F7DE8 /* Main.storyboard in Resources */,
 				34785D4C1FEF6451008F7DE8 /* ScreenShot.png in Resources */,
 			);
@@ -180,10 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34785D461FEF5FE2008F7DE8 /* PreferencesWindowController.swift in Sources */,
+				34785D461FEF5FE2008F7DE8 /* MMPreferencesWindowController.swift in Sources */,
 				34785D311FEF5F6F008F7DE8 /* ViewController.swift in Sources */,
 				34785D2F1FEF5F6F008F7DE8 /* AppDelegate.swift in Sources */,
-				34785D481FEF5FE2008F7DE8 /* PreferencesViewController.swift in Sources */,
+				34785D481FEF5FE2008F7DE8 /* MMPreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

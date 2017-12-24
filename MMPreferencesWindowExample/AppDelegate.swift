@@ -11,7 +11,7 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    let newWindowController: PreferencesWindowController = PreferencesWindowController.shared
+    let newWindowController: MMPreferencesWindowController = MMPreferencesWindowController.shared
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
