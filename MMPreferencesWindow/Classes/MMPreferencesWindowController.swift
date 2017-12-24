@@ -178,13 +178,20 @@ extension String {
 class StringClassConverter<T> {
 
     static func convert(string className: String) -> T.Type? {
-        let nameSpace = "MMPreferencesWindow"
-
-        guard let aClass: T.Type = NSClassFromString("\(nameSpace).\(className)") as? T.Type else {
+        let theNameSpace = "MMPreferencesWindow"
+        guard let nameSpace = Bundle.main.infoDictionary?["CFBundleExecutable"] as? String else {
             return nil
         }
 
-        return aClass
+        var theClass: T.Type? = nil
+
+        if let aClass: T.Type = NSClassFromString("\(nameSpace).\(className)") as? T.Type {
+            theClass = aClass
+        } else if let aClass: T.Type = NSClassFromString("\(theNameSpace).\(className)") as? T.Type {
+            theClass = aClass
+        }
+
+        return theClass
     }
 
 }
