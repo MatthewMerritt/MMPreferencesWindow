@@ -17,7 +17,7 @@ public class MMPreferenceView {
 
     var toolbarIdentifier: NSToolbarItem.Identifier
 
-    init(title: String, icon: String, className: String, identifier: String, nib: String) {
+    public init(title: String, icon: String, className: String, identifier: String, nib: String) {
         self.title = title
         self.icon  = icon
         self.className = className
@@ -84,7 +84,7 @@ public class MMPreferencesWindowController: NSWindowController, NSToolbarDelegat
         }
     }
 
-    func addPreferenceView(title: String, icon: String, className: String, identifier: String, nib: String) {
+    public func addPreferenceView(title: String, icon: String, className: String, identifier: String, nib: String) {
         let preferenceView = MMPreferenceView(title: title, icon: icon, className: className, identifier: identifier, nib: nib)
         preferenceViewsToAdd.append(preferenceView)
     }
