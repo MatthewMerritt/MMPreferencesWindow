@@ -8,7 +8,7 @@
 
 import Cocoa
 
-public class PreferenceView {
+public class MMPreferenceView {
     var title: String
     var icon: String
     var className: String
@@ -49,8 +49,8 @@ public class MMPreferencesWindowController: NSWindowController, NSToolbarDelegat
     var currentViewController: NSViewController!
     var currentView = ""
 
-    var preferenceViews = [PreferenceView]()
-    public var preferenceViewsToAdd = [PreferenceView]()
+    var preferenceViews = [MMPreferenceView]()
+    public var preferenceViewsToAdd = [MMPreferenceView]()
 
     convenience init() {
         self.init(windowNibName: NSNib.Name(rawValue: "PreferencesWindowController"))
@@ -85,7 +85,7 @@ public class MMPreferencesWindowController: NSWindowController, NSToolbarDelegat
     }
 
     func addPreferenceView(title: String, icon: String, className: String, identifier: String, nib: String) {
-        let preferenceView = PreferenceView(title: title, icon: icon, className: className, identifier: identifier, nib: nib)
+        let preferenceView = MMPreferenceView(title: title, icon: icon, className: className, identifier: identifier, nib: nib)
         preferenceViewsToAdd.append(preferenceView)
     }
 
@@ -133,7 +133,7 @@ public class MMPreferencesWindowController: NSWindowController, NSToolbarDelegat
         loadView(preferenceView: preferenceViews.filter { $0.toolbarIdentifier == sender.itemIdentifier }.first!, withAnimation: true)
     }
 
-    func loadView(preferenceView: PreferenceView, withAnimation shouldAnimate: Bool) {
+    func loadView(preferenceView: MMPreferenceView, withAnimation shouldAnimate: Bool) {
         if ( currentView ==  preferenceView.toolbarIdentifier.rawValue) {
             return
         }
