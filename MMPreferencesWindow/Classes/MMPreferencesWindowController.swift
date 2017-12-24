@@ -36,7 +36,8 @@ public class MMPreferenceView {
             return nil
         }
 
-        return viewController.init(nibName: NSNib.Name(rawValue: self.nib), bundle: nil)
+        let bundle = Bundle(for: NSClassFromString(viewController.className())!)
+        return viewController.init(nibName: NSNib.Name(rawValue: self.nib), bundle: bundle)
     }
 
 }
@@ -177,9 +178,7 @@ extension String {
 class StringClassConverter<T> {
 
     static func convert(string className: String) -> T.Type? {
-        guard let nameSpace = Bundle.main.infoDictionary?["CFBundleExecutable"] as? String else {
-            return nil
-        }
+        let nameSpace = "MMPreferencesWindow"
 
         guard let aClass: T.Type = NSClassFromString("\(nameSpace).\(className)") as? T.Type else {
             return nil
