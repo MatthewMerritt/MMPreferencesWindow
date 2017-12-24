@@ -17,8 +17,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
 
         // Add the demo PreferenceViews
-        newWindowController.addPreferenceView(title: "General", icon: "NSPreferencesGeneral", className: "PreferencesViewController", identifier: "GeneralView", nib: "GeneralView")
-        newWindowController.addPreferenceView(title: "Advanced", icon: "NSAdvanced", className: "PreferencesViewController", identifier: "AdvancedView", nib: "AdvancedView")
+        newWindowController.addPreferenceView(title: "General", icon: "NSPreferencesGeneral", className: "MMPreferencesViewController", identifier: "GeneralView", nib: "GeneralView")
+        newWindowController.addPreferenceView(title: "Advanced", icon: "NSAdvanced", className: "MMPreferencesViewController", identifier: "AdvancedView", nib: "AdvancedView")
 
     }
 
