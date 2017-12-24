@@ -8,9 +8,9 @@
 
 import Cocoa
 
-class PreferencesViewController: NSViewController {
+public class PreferencesViewController: NSViewController {
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
     }

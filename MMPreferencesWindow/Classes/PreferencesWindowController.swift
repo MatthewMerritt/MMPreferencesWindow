@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class PreferenceView {
+public class PreferenceView {
     var title: String
     var icon: String
     var className: String
@@ -41,7 +41,7 @@ class PreferenceView {
 
 }
 
-class PreferencesWindowController: NSWindowController, NSToolbarDelegate, NSWindowDelegate {
+public class PreferencesWindowController: NSWindowController, NSToolbarDelegate, NSWindowDelegate {
 
     public static var shared: PreferencesWindowController = PreferencesWindowController()
 
@@ -50,13 +50,13 @@ class PreferencesWindowController: NSWindowController, NSToolbarDelegate, NSWind
     var currentView = ""
 
     var preferenceViews = [PreferenceView]()
-    var preferenceViewsToAdd = [PreferenceView]()
+    public var preferenceViewsToAdd = [PreferenceView]()
 
     convenience init() {
         self.init(windowNibName: NSNib.Name(rawValue: "PreferencesWindowController"))
     }
 
-    override func windowDidLoad() {
+    override public func windowDidLoad() {
         super.windowDidLoad()
 
         // Make us the delegate so we know when the LogWindowController is going to display
@@ -70,7 +70,7 @@ class PreferencesWindowController: NSWindowController, NSToolbarDelegate, NSWind
         }
     }
 
-    func windowDidBecomeKey(_ notification: Notification) {
+    public func windowDidBecomeKey(_ notification: Notification) {
         for preferenceView in preferenceViewsToAdd {
             preferenceViews.append(preferenceView)
             preferenceViews.last?.addTo(toolbar: toolbar!)
@@ -89,7 +89,7 @@ class PreferencesWindowController: NSWindowController, NSToolbarDelegate, NSWind
         preferenceViewsToAdd.append(preferenceView)
     }
 
-    func toolbar(_ toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: NSToolbarItem.Identifier, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
+    public func toolbar(_ toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: NSToolbarItem.Identifier, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
         for view in preferenceViews {
             if view.toolbarIdentifier == itemIdentifier {
                 let iconImage = NSImage(named: NSImage.Name(rawValue: view.icon))
@@ -107,23 +107,23 @@ class PreferencesWindowController: NSWindowController, NSToolbarDelegate, NSWind
         return nil
     }
 
-    func toolbarDefaultItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
+    public func toolbarDefaultItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
         return preferenceViews.flatMap { $0.toolbarIdentifier }
     }
 
-    func toolbarAllowedItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
+    public func toolbarAllowedItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
         return self.toolbarDefaultItemIdentifiers(toolbar)
     }
 
-    func toolbarSelectableItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
+    public func toolbarSelectableItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
         return self.toolbarDefaultItemIdentifiers(toolbar)
     }
 
-    func toolbarWillAddItem(_ notification: Notification) {
+    public func toolbarWillAddItem(_ notification: Notification) {
 //        Swift.print("toolbarWillAddItem")
     }
 
-    func toolbarDidRemoveItem(_ notification: Notification) {
+    public func toolbarDidRemoveItem(_ notification: Notification) {
 //        Swift.print("toolbarDidRemoveItem")
     }
 
