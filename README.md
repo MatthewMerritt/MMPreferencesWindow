@@ -1,5 +1,9 @@
 # MMPreferencesWindow
 
+[![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)](https://swift.org)
+[![Version](https://img.shields.io/cocoapods/v/MMPreferencesWindow.svg?style=flat)](http://cocoapods.org/pods/MMPreferencesWindow)
+[![Platform](https://img.shields.io/cocoapods/p/MMPreferencesWindow.svg?style=flat)](http://cocoapods.org/pods/MMPreferencesWindow)
+[![License](https://img.shields.io/github/license/MatthewMerritt/MMPreferencesWindow.svg)](https://github.com/MatthewMerritt/MMPreferencesWindow/blob/master/LICENSE)
 
 ## Example
 
