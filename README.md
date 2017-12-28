@@ -20,6 +20,10 @@ it, simply add the following line to your Podfile:
 pod 'MMPreferencesWindow', :git => 'https://github.com/MatthewMerritt/MMPreferencesWindow.git'
 ```
 
+## Screen Shot
+
+![ScreenShot](https://github.com/MatthewMerritt/MMPreferencesWindow/blob/master/MMPreferencesWindow/Assets/ScreenShot.png)
+
 ## Author
 
 MatthewMerritt, matthew.merritt@yahoo.com
