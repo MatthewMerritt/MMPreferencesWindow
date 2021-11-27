@@ -37,7 +37,7 @@ public class MMPreferenceView {
         }
 
         let bundle = Bundle(for: NSClassFromString(viewController.className())!)
-        return viewController.init(nibName: NSNib.Name(rawValue: self.nib), bundle: bundle)
+        return viewController.init(nibName: self.nib, bundle: bundle)
     }
 
 }
@@ -54,7 +54,7 @@ public class MMPreferencesWindowController: NSWindowController, NSToolbarDelegat
     public var preferenceViewsToAdd = [MMPreferenceView]()
 
     convenience init() {
-        self.init(windowNibName: NSNib.Name(rawValue: "MMPreferencesWindowController"))
+        self.init(windowNibName: "MMPreferencesWindowController")
     }
 
     override public func windowDidLoad() {
@@ -64,7 +64,7 @@ public class MMPreferencesWindowController: NSWindowController, NSToolbarDelegat
         window?.delegate = self
 
         if toolbar == nil {
-            toolbar = NSToolbar(identifier:NSToolbar.Identifier(rawValue: "ScreenNameToolbarIdentifier"))
+            toolbar = NSToolbar(identifier:"ScreenNameToolbarIdentifier")
             toolbar?.allowsUserCustomization = true
             toolbar?.delegate = self
             self.window?.toolbar = toolbar
@@ -93,7 +93,7 @@ public class MMPreferencesWindowController: NSWindowController, NSToolbarDelegat
     public func toolbar(_ toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: NSToolbarItem.Identifier, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
         for view in preferenceViews {
             if view.toolbarIdentifier == itemIdentifier {
-                let iconImage = NSImage(named: NSImage.Name(rawValue: view.icon))
+                let iconImage = NSImage(named: view.icon)
 
                 let toolbarItem = NSToolbarItem(itemIdentifier: itemIdentifier)
                 toolbarItem.label = view.title
@@ -109,7 +109,7 @@ public class MMPreferencesWindowController: NSWindowController, NSToolbarDelegat
     }
 
     public func toolbarDefaultItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
-        return preferenceViews.flatMap { $0.toolbarIdentifier }
+        return preferenceViews.compactMap { $0.toolbarIdentifier }
     }
 
     public func toolbarAllowedItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
